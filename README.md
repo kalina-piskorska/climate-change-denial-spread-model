@@ -1,4 +1,4 @@
-### climate-change-denial-spread-model
+# climate-change-denial-spread-model
 Code used for a computational model simulating climate change beliefs spread
 
 ## Overview
@@ -17,26 +17,26 @@ To initialize, use the setup function ("setup" button):
 - Assigns each believer an initial belief level and accordingly, a color (from red to green).
 
 ## Belief spread simulation process
-# Social Influence
+### Social Influence
 - Each believer connects with a set number of nearby individuals.
 - Links are colored pink if their beliefs are similar enough for mutual influence, otherwise gray.
 - Influence from neighbors is averaged and, after being modified by the general trust in others, applied to each believer’s state.
 
-# Media Influence
+### Media Influence
 - There are two typed of media incorporated in the model: denialist - with no belief in climate change - and pro-climate media, with a full belief in climate change.
 - Media influence is weighted by general population trust and individual susceptibility, based on the similarity between beliefs (e.g., an individual with a low belief can be more likely to be influenced by denialist media).
 
-# Updating Beliefs
+### Updating Beliefs
 - Belief state is updated each tick based on influence factors (others, media)
 - The color of each believer is updated to reflect belief level.
 
 ## User interface
-# Buttons
+### Buttons
 - setup: Initializes the model.
 - go: Runs the simulation continuously.
 - go once: Advances the model one tick at a time.
 
-# Adjustable parameters
+### Adjustable parameters
 Trust parameters:
 - own_belief_confidence: General population weight of an individual's initial belief, one's confidence and stability of the belief.
 - trust_denial_media: General population trust in denialist media.
@@ -55,7 +55,7 @@ Distribution parameters:
 - std_initial_belief: A standard deviation of the initial belief, contributing to the initial distribution of beliefs in the population.
 - number_of_people: Size of the population.
 
-# Plots, monitors, graphic window
+### Plots, monitors, graphic window
 - Main window showing the visualization of the believers changing beliefs and creating connections with others.
 - A plot showing changes in the numbers of believers with different beliefs (colors) through time (ticks).
     - Monitors showing specific numbers of believers with different colors.
